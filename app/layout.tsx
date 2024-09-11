@@ -3,10 +3,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
 } from "@clerk/nextjs";
 
 const poppins = Poppins({
