@@ -16,8 +16,7 @@ const Footer = () => {
         </Link>
 
         <p>
-          2024 Eventor. Project developed by Slavko Trajkovski for subject
-          Advanced Web Design.
+          2024 Eventor. Project developed by Slavko Trajkovski
         </p>
       </div>
     </footer>
