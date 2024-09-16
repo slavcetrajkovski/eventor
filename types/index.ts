@@ -52,3 +52,8 @@ export type UpdateEventParams = {
 export type CreateCategoryParams = {
   categoryName: string;
 };
+
+export type SearchParamProps = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};

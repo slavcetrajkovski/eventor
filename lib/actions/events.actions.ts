@@ -1,13 +1,22 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-
 import { connectToDatabase } from "@/lib/database";
 import Event from "@/lib/database/models/event.model";
 import User from "@/lib/database/models/user.model";
+import Category from "@/lib/database/models/category.model";
 import { handleError } from "@/lib/utils";
-
 import { CreateEventParams, UpdateEventParams } from "@/types";
+
+const populateEvent = (query: any) => {
+  return query
+    .populate({
+      path: "organizer",
+      model: User,
+      select: "_id firstName lastName",
+    })
+    .populate({ path: "category", model: Category, select: "_id name" });
+};
 
 export async function createEvent({ userId, event, path }: CreateEventParams) {
   try {
@@ -15,7 +24,7 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
 
     const organizer = await User.findById(userId);
     if (!organizer) throw new Error("Organizer not found");
-    
+
     const newEvent = await Event.create({
       ...event,
       category: event.categoryId,
@@ -46,6 +55,20 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
     revalidatePath(path);
 
     return JSON.parse(JSON.stringify(updatedEvent));
+  } catch (error) {
+    handleError(error);
+  }
+}
+
+export async function getEventById(eventId: string) {
+  try {
+    await connectToDatabase();
+
+    const event = await populateEvent(Event.findById(eventId));
+
+    if (!event) throw new Error("Event not found");
+
+    return JSON.parse(JSON.stringify(event));
   } catch (error) {
     handleError(error);
   }
