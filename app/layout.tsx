@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Eventor",
   description: "Event Managment App",
   icons: {
-    icon: "/assets/images/logo.svg",
+    icon: "/assets/images/favicon.ico",
   },
 };
 
