@@ -81,12 +81,12 @@ export type GetOrdersByUserParams = {
 };
 
 export type CreateOrderParams = {
-  stripeId: string
-  eventId: string
-  buyerId: string
-  totalAmount: string
-  createdAt: Date
-}
+  stripeId: string;
+  eventId: string;
+  buyerId: string;
+  totalAmount: string;
+  createdAt: Date;
+};
 
 export type CheckoutOrderParams = {
   eventTitle: string;
@@ -94,6 +94,11 @@ export type CheckoutOrderParams = {
   price: string | undefined;
   isFree: boolean;
   buyerId: string;
+};
+
+export type GetOrdersByEventParams = {
+  eventId: string;
+  searchString: string;
 };
 
 export type CreateCategoryParams = {
@@ -109,4 +114,9 @@ export type UrlQueryParams = {
   params: string;
   key: string;
   value: string | null;
+};
+
+export type RemoveUrlQueryParams = {
+  params: string;
+  keysToRemove: string[];
 };
