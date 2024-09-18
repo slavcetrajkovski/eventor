@@ -21,6 +21,7 @@
 ## Документација
 
 ## Демо (видео)
+https://github.com/user-attachments/assets/f8a4c2be-53ad-4475-9837-075a1d813c6f
 
 ## Vercel (хостирано)
 - [Линк](https://eventor-one.vercel.app/)
