@@ -62,11 +62,39 @@ export type GetAllEventsParams = {
 };
 
 export type GetRelatedEventsByCategoryParams = {
-  categoryId: string
+  categoryId: string;
+  eventId: string;
+  limit?: number;
+  page: number | string;
+};
+
+export type GetEventsByUserParams = {
+  userId: string;
+  limit?: number;
+  page: number;
+};
+
+export type GetOrdersByUserParams = {
+  userId: string | null;
+  limit?: number;
+  page: string | number | null;
+};
+
+export type CreateOrderParams = {
+  stripeId: string
   eventId: string
-  limit?: number
-  page: number | string
+  buyerId: string
+  totalAmount: string
+  createdAt: Date
 }
+
+export type CheckoutOrderParams = {
+  eventTitle: string;
+  eventId: string;
+  price: string | undefined;
+  isFree: boolean;
+  buyerId: string;
+};
 
 export type CreateCategoryParams = {
   categoryName: string;
