@@ -1,23 +1,26 @@
-This is a Next.js project developed by **Slavko Trajkovski** with index **213243**, for the subject Advanced Web Design.
+# Eventor
+Идејата на овој проект беше да се развие апликација која ќе им овозможи на корисниците - поединци или бизниси - да креираат, управуваат и присуствуваат на различни настани, создавајќи интегрирана платформа за управување со настани. Преку **Eventor**, корисниците можат да организираат сопствени настани, да пребаруваат настани организирани од други корисници, како и да управуваат со сите аспекти на нивните настани, од креирање до управување со продажбата на билети и учеството на гостите.
 
-## Running the project locally
+Апликацијата овозможува лесно и интуитивно управување со настаните преку функции за креирање, уредување, и бришење на настани, што им дава целосна контрола на организаторите. За да се обезбеди сигурна и удобна наплата, **Eventor** интегрира **Stripe**, овозможувајќи плаќање за настани директно преку платформата. Дополнително, корисниците имаат преглед на сите нивни нарачки за секој настан, како и листа на купени билети.
 
-First, install all the necessary dependencies:
+Платформата исто така нуди преглед на сите организирани настани за даден корисник, овозможувајќи им лесно управување со деталите на настаните, како и анализа на успешноста на секој настан преку увид во нарачките. Целта на **Eventor** е да понуди едноставно, брзо и лесно решение за организирање настани, како за малите бизниси така и за големите компании или поединци.
 
-```bash
-npm install
-```
+За реализација на **Eventor**, ги користев следните технологии:
+- **Next.js**
+- **Mongoose** и **MongoDB**
+- **Stripe**
 
-Second, run the development server:
+## Автор
+- **Славко Трајоквски 213243**
 
-```bash
-npm run dev
-```
+## Ментор
+- **проф. др. Бобан Јоксимоски**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Презентација
 
-## Deployed version
+## Документација
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Демо (видео)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Vercel (хостирано)
+- [Линк](https://eventor-one.vercel.app/)
