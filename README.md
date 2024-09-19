@@ -18,7 +18,7 @@
 - **проф. др. Бобан Јоксимоски**
 
 ## Презентација
-[Eventor.pdf](https://github.com/user-attachments/files/17051652/Eventor.pdf)
+[eventor-presentation.pdf](https://github.com/user-attachments/files/17051705/eventor-presentation.pdf)
 
 ## Документација
 
